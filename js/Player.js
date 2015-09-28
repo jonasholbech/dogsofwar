@@ -21,13 +21,25 @@ function setupPlayer(){
         t.fireCounter--;
         if(Controls.lkd){
             t.x-= t.speed;
-        } else  if(Controls.rkd){
+            if(t.x<0){
+                t.x=0;
+            }
+        } else if(Controls.rkd){
             t.x+= t.speed;
+            if((t.x + t.width)>Game.stage.canvas.width){
+                t.x=Game.stage.canvas.width- t.width;
+            }
         }
         if(Controls.ukd){
             t.y-= t.speed;
+            if(t.y<0){
+                t.y=0;
+            }
         } else if (Controls.dkd){
             t.y+= t.speed;
+            if(t.y+ t.height > Game.stage.canvas.height){
+                t.y=Game.stage.canvas.height- t.height;
+            }
         }
         if(Controls.skd){
             if(t.weapons[t.currentWeapon]){

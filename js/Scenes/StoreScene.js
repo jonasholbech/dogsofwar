@@ -16,6 +16,7 @@ var StoreScene = function (data) {
         StoreScene.items.push(new Weapon(ss, vd.guns[i]));
     }
 
+    //12gauge not used, TODO
     StoreScene.ammoTypes={
         "9mm":{"price": 17, "inc":10},
         "12gauge":{"price": 25, "inc":6},
