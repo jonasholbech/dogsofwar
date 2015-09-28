@@ -10,6 +10,7 @@ var MissionSelectScene = function (data) {
 
     //TODO hover virker kun første gang
     my.setup=function(){
+        Game.stage.enableMouseOver(5);
         document.querySelector("canvas").style.backgroundColor="#6495ED";
         var gfx = new createjs.Bitmap(Preloader.queue.getResult('img/European_map.png'));
         my.addChild(gfx);
