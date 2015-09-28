@@ -48,7 +48,9 @@ var Preloader={
             {src:"img/tank3.png"},
             {src:"img/tank4.png"},
             {src:"img/splash.jpg"},
-            {src:"img/European_map.png"}
+            {src:"img/European_map.png"},
+            {src:"data/backgrounds.json", id:"bgJson"},
+            {src:"data/backgrounds.png"}
         ]);
 
 
