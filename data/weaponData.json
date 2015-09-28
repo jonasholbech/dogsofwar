@@ -1,0 +1,35 @@
+{
+  "guns":[
+    {
+      "name": "Small Gun",
+      "sprite":"small_gun",
+      "price": 400,
+      "range":250,
+      "firingSpeed":30,
+      "damage ":10,
+      "ammoType": "9mm",
+      "bulletSpeed": 4
+    },
+    {
+    "name": "Larger Gun",
+    "sprite":"larger_gun",
+    "price": 1000,
+    "range":350,
+    "firingSpeed":35,
+    "damage ":16,
+    "ammoType": "9mm",
+    "bulletSpeed": 4
+    },
+    {
+      "name": "Assault Rifle",
+      "sprite":"assault",
+      "price": 4000,
+      "range":500,
+      "firingSpeed":15,
+      "damage ":13,
+      "ammoType": ".357",
+      "bulletSpeed": 5
+    }
+  ]
+
+}

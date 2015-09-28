@@ -1,0 +1,38 @@
+{
+
+"images": [
+    "data/weapons.png"
+],
+
+"frames": [
+    [2, 2, 1253, 241, 0, 0, 0],
+    [1257, 2, 645, 345, 0, 0, 0],
+    [2, 245, 850, 327, 0, 0, 0],
+    [854, 245, 292, 217, 0, 0, 0],
+    [1148, 349, 777, 270, 0, 0, 0],
+    [2, 574, 942, 278, 0, 0, 0],
+    [946, 621, 802, 275, 0, 0, 0],
+    [2, 854, 613, 335, 0, 0, 0],
+    [617, 854, 309, 176, 0, 0, 0],
+    [928, 898, 647, 296, 0, 0, 0]
+],
+
+"animations": {
+    "sniper": [0],
+    "huge": [1],
+    "heavy_assault": [2],
+    "larger_gun": [3],
+    "bfg": [4],
+    "smaller_sniper": [5],
+    "rail": [6],
+    "assault": [7],
+    "small_gun": [8],
+    "the_punisher": [9]
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:6c482dff5815499f46335910f4f1bc37:56384b944319deb40d6d0858918862a4:ba48453f8b2235fdb166a51105f49255$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}
