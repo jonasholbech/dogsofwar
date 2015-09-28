@@ -72,8 +72,9 @@ var Game={
         StoreScene.update();//Hack alert
     },
     startBattle:function(){
+        this.scenes[this.currentScene+1].setData(this.levelData.levels[this.currentMission]);
         this.nextScene();
-        this.scenes[this.currentScene].setup(this.levelData.levels[this.currentMission]);
+        //this.scenes[this.currentScene].setup(this.levelData.levels[this.currentMission]);
         this.inBattle=true;
         //console.log(this.levelData.levels[this.currentMission]);
     },

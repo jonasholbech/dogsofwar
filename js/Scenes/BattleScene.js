@@ -12,6 +12,9 @@
         this.killCounter.foot=0;
         this.killCounter.tank=0;
         this.killCounter.helicopter=0;
+        this.tileSpriteSheet=new createjs.SpriteSheet(Preloader.queue.getResult('bgJson'));
+        this.tileSprites=[];
+        this.bgs=["wall_tl","wall_l","wall_bl","wall_b"]
     }
     BattleScene.prototype = new createjs.Container();
     //Save a reference to the parent constructor
@@ -22,10 +25,27 @@
         this.Parent_constructor();
         //continue with own constructor
         console.log("BS constructed");
-
     }
-    BattleScene.prototype.setup=function(data){
+    BattleScene.prototype.setData=function(data){
         this.data=data;
+    }
+    BattleScene.prototype.setup=function(){
+        //this.data=data;
+        var t, i, z, xPos=0, yPos=0;
+        console.log("setup called ",this);
+        console.log(this.tileSpriteSheet);
+        for(z=0; z<Game.stage.canvas.height/48; z++){
+            for(i=0; i<Game.stage.canvas.width/48; i++){//TILESIZE, TODO add to config
+                t=new createjs.Sprite(this.tileSpriteSheet, this.bgs[Utils.getRandomInt(0,this.bgs.length-1)]);
+                t.x=xPos;
+                t.y=yPos;
+                xPos+=48;
+                this.addChild(t);
+                this.tileSprites.push(t);
+            }
+            xPos=0;
+            yPos+=48;
+        }
         this.addChild(Player);
         Player.x=(Game.width/2)-Player.width/2;
         Player.y=Game.height-Player.height;
