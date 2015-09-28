@@ -14,7 +14,7 @@
         this.killCounter.helicopter=0;
         this.tileSpriteSheet=new createjs.SpriteSheet(Preloader.queue.getResult('bgJson'));
         this.tileSprites=[];
-        this.bgs=["wall_tl","wall_l","wall_bl","wall_b"]
+        //this.bgs=["wall_tl","wall_l","wall_bl","wall_b"];//TODO many more
     }
     BattleScene.prototype = new createjs.Container();
     //Save a reference to the parent constructor
@@ -34,9 +34,10 @@
         var t, i, z, xPos=0, yPos=0;
         console.log("setup called ",this);
         console.log(this.tileSpriteSheet);
+        var animations=this.tileSpriteSheet.animations.length;
         for(z=0; z<Game.stage.canvas.height/48; z++){
             for(i=0; i<Game.stage.canvas.width/48; i++){//TILESIZE, TODO add to config
-                t=new createjs.Sprite(this.tileSpriteSheet, this.bgs[Utils.getRandomInt(0,this.bgs.length-1)]);
+                t=new createjs.Sprite(this.tileSpriteSheet, this.tileSpriteSheet.animations[Utils.getRandomInt(0,animations)]);
                 t.x=xPos;
                 t.y=yPos;
                 xPos+=48;

@@ -1,9 +1,15 @@
 "use strict"
-function MissionButton(text, e, customContext){
+function MissionButton(text, e, customContext, completed){
     var context = customContext || Game
     var my = new createjs.Container();
     var c = new createjs.Shape();
-    c.graphics.beginFill("#F00").drawCircle(0,0,12);
+    console.log(completed);
+    if(!completed) {
+        c.graphics.beginFill("#F00").drawCircle(0, 0, 12);
+    } else {
+        c.graphics.beginFill("#CCC").drawCircle(0, 0, 12);
+
+    }
     c.button = new createjs.Shape();
     c.button.graphics.beginFill("#000").drawRect(0,0,200,50)
     c.button.x=16;
