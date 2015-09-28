@@ -28,11 +28,12 @@ var Preloader={
             {src:"js/TextDO.js"},
 
 
-            {src:"js/SplashScene.js"},
-            {src:"js/MissionSelectScene.js"},
-            {src:"js/StoreScene.js"},
-            {src:"js/BattleScene.js"},
-            {src:"js/VictoryScene.js"},
+            {src:"js/Scenes/SplashScene.js"},
+            {src:"js/Scenes/MissionSelectScene.js"},
+            {src:"js/Scenes/StoreScene.js"},
+            {src:"js/Scenes/BattleScene.js"},
+            {src:"js/Scenes/VictoryScene.js"},
+
             {src:"js/Controls.js"},
 
             {src:"img/player.png"},
