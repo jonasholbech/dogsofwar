@@ -26,6 +26,8 @@ var StoreScene = function (data) {
     var xPos=200, yPos=100, tb, tc,ba, ammoInfo;
     for(i=0; i<StoreScene.items.length; i++){
         tc = new createjs.Container();
+        StoreScene.items[i].sprite.scaleX=0.3;
+        StoreScene.items[i].sprite.scaleY=0.3;
         tc.addChild(StoreScene.items[i].sprite);
         tc.weapon=StoreScene.items[i];
         tb=new Button("Buy: $"+StoreScene.items[i].price, StoreScene.buyItem)
